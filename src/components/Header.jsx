@@ -4,8 +4,8 @@ import ApiService from "../utils/ApiService";
 const Header = () => {
     const [currencies, setCurrencies] = useState([])
     useEffect(() => {
-        ApiService.getCurrency('usd','uah').then(res => setCurrencies(prev => [...prev, res.uah.toFixed(2)]))
-        ApiService.getCurrency('eur','uah').then(res => setCurrencies(prev => [...prev, res.uah.toFixed(2)]))
+        ApiService.getCurrency('usd', 'uah').then(res => setCurrencies(prev => [...prev, res.uah.toFixed(2)]))
+        ApiService.getCurrency('eur', 'uah').then(res => setCurrencies(prev => [...prev, res.uah.toFixed(2)]))
     }, [])
 
     return (

@@ -20,11 +20,11 @@ const ConverterBody = () => {
                     ?
                     firstCurrency !== secondCurrency
                         ?
-                        setSecondValue('' + (res[secondCurrency] * parseFloat(e.target.value)).toFixed(8).replace(/0*$/,""))
+                        setSecondValue('' + (res[secondCurrency] * parseFloat(e.target.value)).toFixed(8).replace(/0*$/, ""))
                         :
                         setSecondValue('' + (res[secondCurrency] * parseFloat(e.target.value)))
                     :
-                setSecondValue('')
+                    setSecondValue('')
             })
     }
 
@@ -34,7 +34,7 @@ const ConverterBody = () => {
             .then(res => {
                 e.target.value !== ''
                     ?
-                    setFirstValue('' + (res[firstCurrency] * parseFloat(e.target.value)).toFixed(10).replace(/0*$/,""))
+                    setFirstValue('' + (res[firstCurrency] * parseFloat(e.target.value)).toFixed(10).replace(/0*$/, ""))
                     :
                     setFirstValue('')
             })
@@ -65,7 +65,6 @@ const ConverterBody = () => {
                 <ConverterForm onInputChange={onSecondInputChange} valueInput={secondValue} valueSelect={secondCurrency}
                                onSelectChange={e => setSecondCurrency(e.target.value)} header={'To'}/>
             </div>
-
         </div>
     );
 };
