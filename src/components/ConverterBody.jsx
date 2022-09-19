@@ -45,7 +45,6 @@ const ConverterBody = () => {
         setSecondCurrency(firstCurrency)
         setFirstValue(secondValue)
         setSecondValue(firstValue)
-
     }
 
     return (
